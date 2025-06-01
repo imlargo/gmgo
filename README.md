@@ -1,4 +1,4 @@
-# GMGO - Go Gmail Client
+# gmgo - Gmail Go Client
 
 GMGO is a robust and easy-to-use Go library designed for sending emails via the Gmail API. It simplifies sending plain text, HTML emails, and handling attachments seamlessly.
 
