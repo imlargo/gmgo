@@ -9,10 +9,9 @@ import (
 
 func main() {
 
-	cfg := &gmgo.Config{
-		CredentialsFile: "gmgo_credentials.json",
-		TokenFile:       "gmgo_token.json",
-	}
+	cfg := gmgo.DefaultConfig()
+
+	// Note: Ensure you have run `gmgo.GetOauthToken(cfg)` to obtain the OAuth token before running this example.
 
 	client, err := gmgo.NewClient(cfg)
 	if err != nil {
