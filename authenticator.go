@@ -11,6 +11,10 @@ import (
 )
 
 func GetOauthToken(cfg *Config) (*oauth2.Token, error) {
+	if len(cfg.Scopes) == 0 {
+		return nil, fmt.Errorf("no scopes provided in config")
+	}
+
 	b, err := os.ReadFile(cfg.CredentialsFile)
 	if err != nil {
 		return nil, fmt.Errorf("error reading credentials from %s: %w", cfg.CredentialsFile, err)
